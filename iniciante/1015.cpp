@@ -1,31 +1,39 @@
 #include <iostream>
 #include <cmath>
+#include <math.h>
 using namespace std;
 
 
 int main(int argc, char const *argv[]) {
-  double y[3];
-  double x[3];
+  float y[3];
+  float x[3];
   int i = 1;
-  double aux;
-  double distancia;
-  while (i < 3) {
+  float aux;
+  float distancia;
+  while (i < 2) {
     std::cin >> aux;
-    y[i] = aux;
+    x[1] = aux;
+    std::cin >> aux;
+    y[1] = aux;
     i++;
   }
   i = 1;
-  while (i < 3) {
+  while (i < 2) {
     std::cin >> aux;
-    x[i] = aux;
+    x[2] = aux;
+    std::cin >> aux;
+    y[2] = aux;
     i++;
   }
-
-  //distancia = ((x[2] + x[1])*(x[2] + x[1])) + ((y[2] + y[1])*(y[2] + y[1]));
-  //distancia = sqrt(distancia);
-  std::cout << x[1] << x[2] << '\n';
-  std::cout << y[1] << y[2] << '\n';
+  float x1, x2, y1, y2;
+  x1 = x[1];
+  x2 = x[2];
+  y1 = y[1];
+  y2 = y[2];
+  distancia = std::sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
   cout.precision(4);
-  //cout << std::fixed << distancia << '\n';
+
+  cout << std::fixed << distancia << '\n';
+
   return 0;
 }
