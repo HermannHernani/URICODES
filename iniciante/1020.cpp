@@ -9,8 +9,8 @@ int main(int argc, char const *argv[])
 	cin >> n;
 
 	ano = n/365;
-	mes = n%365/30;
-	dias = n%30/2;
+	mes = (n%365)/30;
+	dias = (n%365)%30;
 
 
 	cout << ano << " ano(s)" << endl;
